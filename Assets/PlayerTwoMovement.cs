@@ -45,22 +45,25 @@ public class PlayerTwoMovement : MonoBehaviour
             if (hit.collider.name == "PlayerOneRB")
             {
                 // StartCoroutine(CountJump(hit.collider.name, this.name));
-                _sm.playerOneScore += 2;
+                _sm.playerOneScore += 1;
             }
         }
 
-        if (hit.collider.tag == "Terrain")
+        if (hit.collider != null)
         {
-            colliderCount += 1;
-        }
-        if (hit.collider.tag != "Terrain")
-        {
-            colliderCount -= 1;
-        }
-        if (colliderCount == 800)
-        {
-            transform.Translate(Vector3.forward * 50 * Time.deltaTime);
-            colliderCount = 0;
+            if (hit.collider.tag == "Terrain")
+            {
+                colliderCount += 1;
+            }
+            if (hit.collider.tag != "Terrain")
+            {
+                colliderCount -= 1;
+            }
+            if (colliderCount == 800)
+            {
+                transform.Translate(Vector3.forward * 50 * Time.deltaTime);
+                colliderCount = 0;
+            }
         }
 
     }

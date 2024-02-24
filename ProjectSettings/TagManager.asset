@@ -10,6 +10,8 @@ TagManager:
   - Terrain
   - p1UIScore
   - p2UIScore
+  - SceneManager
+  - WinBanner
   layers:
   - Default
   - TransparentFX

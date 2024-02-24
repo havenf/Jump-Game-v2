@@ -18,14 +18,16 @@ public class ScoringManager : MonoBehaviour
 
         tmpUIP1 = GameObject.FindGameObjectWithTag("p1UIScore").GetComponent<TextMeshProUGUI>();
         tmpUIP2 = GameObject.FindGameObjectWithTag("p2UIScore").GetComponent<TextMeshProUGUI>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(RunScoreSystem());
         tmpUIP1.text = $"Player 1: {(int)playerOneScore}";
         tmpUIP2.text = $"Player 2: {(int)playerTwoScore}";
+
+        StartCoroutine(RunScoreSystem());
     }
 
     private IEnumerator RunScoreSystem()
