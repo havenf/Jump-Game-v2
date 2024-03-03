@@ -12,6 +12,8 @@ TagManager:
   - p2UIScore
   - SceneManager
   - WinBanner
+  - AppState
+  - Collectible
   layers:
   - Default
   - TransparentFX

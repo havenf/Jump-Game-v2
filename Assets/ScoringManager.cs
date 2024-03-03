@@ -36,7 +36,6 @@ public class ScoringManager : MonoBehaviour
         playerOneScore -= 0.001;
         playerTwoScore += 0.005;
 
-        Debug.Log((int)playerOneScore + " | " + (int)playerTwoScore);
         yield return new WaitForSeconds(1);
     }
 }

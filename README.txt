@@ -31,3 +31,30 @@ CHANGES - 02/24/24:
         - winning player displays respectively upon reaching 1000
 
     - Scene Manager script added to introduce end-of-game logic and scene changes
+
+CHANGES - 03/01/24
+
+- Added PlayerManager script
+    - maintains player state 
+
+- Added Key script
+
+- Added InventoryManager script
+    - Manages inventory items
+
+- Added MainManager script
+    - Manages all scripts dealign with inventory and items
+
+- Added Collectible Item script
+    - Script that destroys gameObject upon collision
+
+- Added ManagerStatus script
+    - Desplays status of the manager script
+
+- Added IGameManager script
+    - Enumerator status script
+    
+- Added Basic UI script
+    - Creates and updates UI related to inventory system
+
+- Script debugging and hierarchy organization in current project in progress 
