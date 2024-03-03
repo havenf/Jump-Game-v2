@@ -1,4 +1,4 @@
-CHANGES - 02/24/24:
+CHANGELOG - 02/24/24:
 
 - Second version created to better suit the effort at hand
 - Previous version had scripts used to get the project started dealing with camera settings
