@@ -14,6 +14,7 @@ TagManager:
   - WinBanner
   - AppState
   - Collectible
+  - CollectibleManager
   layers:
   - Default
   - TransparentFX

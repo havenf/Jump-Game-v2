@@ -8,12 +8,15 @@ public class PlayerTwoMovement : MonoBehaviour
     private float obstacleRange = 2.0f;
     private float speed;
     private ScoringManager _sm;
+
+    private Rigidbody _rb;
     private int colliderCount = 0;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.3f;
+        speed = 0.5f;
         _sm = GameObject.FindGameObjectWithTag("scoring").GetComponent<ScoringManager>();
+        _rb = GameObject.FindGameObjectWithTag("p2rb").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -36,35 +39,39 @@ public class PlayerTwoMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-
-        Ray ray = new Ray(transform.position, transform.up);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, obstacleRange) && hit.collider.gameObject != _playerObject)
+        if (Input.GetKeyDown(KeyCode.Period))
         {
-            if (hit.collider.name == "PlayerOneRB")
-            {
-                // StartCoroutine(CountJump(hit.collider.name, this.name));
-                _sm.playerOneScore += 1;
-            }
+            _rb.velocity = new Vector3(_rb.velocity.x, speed * 3, _rb.velocity.z);
         }
 
-        if (hit.collider != null)
-        {
-            if (hit.collider.tag == "Terrain")
-            {
-                colliderCount += 1;
-            }
-            if (hit.collider.tag != "Terrain")
-            {
-                colliderCount -= 1;
-            }
-            if (colliderCount == 800)
-            {
-                transform.Translate(Vector3.forward * 50 * Time.deltaTime);
-                colliderCount = 0;
-            }
-        }
+        // Ray ray = new Ray(transform.position, transform.up);
+        // RaycastHit hit;
+
+        // if (Physics.Raycast(ray, out hit, obstacleRange) && hit.collider.gameObject != _playerObject)
+        // {
+        //     if (hit.collider.name == "PlayerOneRB")
+        //     {
+        //         // StartCoroutine(CountJump(hit.collider.name, this.name));
+        //         _sm.playerOneScore += 1;
+        //     }
+        // }
+
+        // if (hit.collider != null)
+        // {
+        //     if (hit.collider.tag == "Terrain")
+        //     {
+        //         colliderCount += 1;
+        //     }
+        //     if (hit.collider.tag != "Terrain")
+        //     {
+        //         colliderCount -= 1;
+        //     }
+        //     if (colliderCount == 800)
+        //     {
+        //         transform.Translate(Vector3.forward * 50 * Time.deltaTime);
+        //         colliderCount = 0;
+        //     }
+        // }
 
     }
 }

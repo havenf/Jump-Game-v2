@@ -33,7 +33,7 @@ public class PlayerOneMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             _rb.velocity = new Vector3(_rb.velocity.x, speed * 3, _rb.velocity.z);
         }
