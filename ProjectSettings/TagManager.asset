@@ -15,6 +15,7 @@ TagManager:
   - AppState
   - Collectible
   - CollectibleManager
+  - ControlPanel
   layers:
   - Default
   - TransparentFX

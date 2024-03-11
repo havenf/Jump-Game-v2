@@ -10,7 +10,7 @@ public class PlayerTwoMovement : MonoBehaviour
     private ScoringManager _sm;
 
     private Rigidbody _rb;
-    private int colliderCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,6 @@ public class PlayerTwoMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.I))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -44,34 +43,6 @@ public class PlayerTwoMovement : MonoBehaviour
             _rb.velocity = new Vector3(_rb.velocity.x, speed * 3, _rb.velocity.z);
         }
 
-        // Ray ray = new Ray(transform.position, transform.up);
-        // RaycastHit hit;
-
-        // if (Physics.Raycast(ray, out hit, obstacleRange) && hit.collider.gameObject != _playerObject)
-        // {
-        //     if (hit.collider.name == "PlayerOneRB")
-        //     {
-        //         // StartCoroutine(CountJump(hit.collider.name, this.name));
-        //         _sm.playerOneScore += 1;
-        //     }
-        // }
-
-        // if (hit.collider != null)
-        // {
-        //     if (hit.collider.tag == "Terrain")
-        //     {
-        //         colliderCount += 1;
-        //     }
-        //     if (hit.collider.tag != "Terrain")
-        //     {
-        //         colliderCount -= 1;
-        //     }
-        //     if (colliderCount == 800)
-        //     {
-        //         transform.Translate(Vector3.forward * 50 * Time.deltaTime);
-        //         colliderCount = 0;
-        //     }
-        // }
 
     }
 }

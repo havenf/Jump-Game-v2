@@ -32,7 +32,7 @@ CHANGELOG - 02/24/24:
 
     - Scene Manager script added to introduce end-of-game logic and scene changes
 
-CHANGES - 03/01/24
+CHANGELOG - 03/01/24
 
 - Added PlayerManager script
     - maintains player state 
@@ -58,3 +58,29 @@ CHANGES - 03/01/24
     - Creates and updates UI related to inventory system
 
 - Script debugging and hierarchy organization in current project in progress 
+
+CHANGELOG - 03/08/24
+
+- Removed current scoring system.
+
+- Terrain and objects rearranged to represent a course.
+
+- Both players now have the same movement speed and jump height.
+
+- Player one is heavier than player two by 5:1.
+
+- New map features a course that requires two players to get to the end.
+
+- Control panels are placed throughout the new map that players must help each other get to.
+        -     Using the control panels (currently in theory, not in practice) for player one extends a bridge to a collectible.
+        -     Player two control panel raises and lowers an elevator (in theory).
+        -     The collectible (a coin), upon being collected (in theory, not practice) ends the game.
+
+- New jointed objects as a part of the map contribute to the course experience.
+        -     Players must balance their character and work with each other.
+
+- Script added to rotate and destroy collectible upon collision.
+        -     Rotation added to indicate where the collectible object is.
+
+- Control panel script added to detect proximity of players within distance and features an isPlayerOne boolean
+        -     Control panel button script added for player one to control bridge (currently debugging)

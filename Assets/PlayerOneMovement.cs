@@ -7,6 +7,7 @@ public class PlayerOneMovement : MonoBehaviour
     private float speed;
     private Rigidbody _rb;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerOneMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
