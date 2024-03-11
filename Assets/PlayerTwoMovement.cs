@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PlayerTwoMovement : MonoBehaviour
 {
-    private GameObject _playerObject;
-    private float obstacleRange = 2.0f;
     private float speed;
-    private ScoringManager _sm;
 
     private Rigidbody _rb;
 
@@ -15,7 +12,6 @@ public class PlayerTwoMovement : MonoBehaviour
     void Start()
     {
         speed = 0.5f;
-        _sm = GameObject.FindGameObjectWithTag("scoring").GetComponent<ScoringManager>();
         _rb = GameObject.FindGameObjectWithTag("p2rb").GetComponent<Rigidbody>();
     }
 
@@ -42,7 +38,5 @@ public class PlayerTwoMovement : MonoBehaviour
         {
             _rb.velocity = new Vector3(_rb.velocity.x, speed * 3, _rb.velocity.z);
         }
-
-
     }
 }
